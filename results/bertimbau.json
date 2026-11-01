@@ -1,0 +1,60 @@
+{
+  "model": "neuralmind/bert-base-portuguese-cased",
+  "device": "Apple Silicon (MPS)",
+  "args": {
+    "max_train": 20000,
+    "max_val": 4000,
+    "max_test": 0,
+    "epochs": 2.0,
+    "batch_size": 16,
+    "lr": 2e-05,
+    "max_len": 128,
+    "tag": "bertimbau"
+  },
+  "rows": {
+    "train": 20000,
+    "val": 4000,
+    "test": 11367
+  },
+  "full_test_set": true,
+  "training_time_s": 1048.3,
+  "val_f1_macro": 0.9547,
+  "test": {
+    "accuracy": 0.9657,
+    "f1_macro": 0.9585,
+    "per_class": {
+      "negativo": {
+        "precision": 0.9415,
+        "recall": 0.9409,
+        "f1": 0.9412,
+        "support": 3316
+      },
+      "positivo": {
+        "precision": 0.9757,
+        "recall": 0.9759,
+        "f1": 0.9758,
+        "support": 8051
+      }
+    },
+    "confusion_matrix": [
+      [
+        3120,
+        196
+      ],
+      [
+        194,
+        7857
+      ]
+    ]
+  },
+  "latency_ms_per_review_single": 14.25,
+  "throughput_reviews_per_s_batch32": 103.8,
+  "comparison_with_baseline": {
+    "baseline_f1_macro": 0.9423,
+    "finetuned_f1_macro": 0.9585,
+    "delta_f1_macro_pp": 1.62,
+    "baseline_accuracy": 0.9515,
+    "finetuned_accuracy": 0.9657,
+    "delta_accuracy_pp": 1.42
+  }
+}
