@@ -1,0 +1,40 @@
+{
+  "model": "TF-IDF (1-2 gramas, 200 mil atributos) + Regressão Logística (liblinear, class_weight=balanced)",
+  "chosen_C": 8.0,
+  "val_f1_macro": 0.9448,
+  "test": {
+    "accuracy": 0.9515,
+    "f1_macro": 0.9423,
+    "per_class": {
+      "negativo": {
+        "precision": 0.8942,
+        "recall": 0.9457,
+        "f1": 0.9192,
+        "support": 3316
+      },
+      "positivo": {
+        "precision": 0.9771,
+        "recall": 0.9539,
+        "f1": 0.9654,
+        "support": 8051
+      }
+    },
+    "confusion_matrix": [
+      [
+        3136,
+        180
+      ],
+      [
+        371,
+        7680
+      ]
+    ]
+  },
+  "majority_class_baseline_test": {
+    "accuracy": 0.7083,
+    "f1_macro": 0.4146
+  },
+  "latency_ms_per_review_single": 0.163,
+  "throughput_reviews_per_s_batch": 94020.5,
+  "hardware": "CPU (Apple Silicon, 16 GB)"
+}

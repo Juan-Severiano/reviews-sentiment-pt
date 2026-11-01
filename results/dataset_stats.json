@@ -1,0 +1,33 @@
+{
+  "dataset": "ruanchaves/b2w-reviews01",
+  "seed": 42,
+  "rows_after_labeling": 112008,
+  "splits": {
+    "train": {
+      "rows": 89168,
+      "products": 34115,
+      "class_share": {
+        "negativo": 0.2943,
+        "positivo": 0.7057
+      }
+    },
+    "val": {
+      "rows": 11473,
+      "products": 4265,
+      "class_share": {
+        "negativo": 0.2918,
+        "positivo": 0.7082
+      }
+    },
+    "test": {
+      "rows": 11367,
+      "products": 4265,
+      "class_share": {
+        "negativo": 0.2917,
+        "positivo": 0.7083
+      }
+    }
+  },
+  "products_shared_between_splits": 0,
+  "test_texts_also_in_train_share": 0.0128
+}

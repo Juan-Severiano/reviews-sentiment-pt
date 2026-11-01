@@ -1,0 +1,35 @@
+[project]
+name = "reviews-sentiment-pt"
+version = "0.1.0"
+description = "Classificador de sentimento para avaliações de e-commerce em português: baseline TF-IDF contra BERTimbau ajustado."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "datasets>=2.19",
+    "pandas>=2.0",
+    "scikit-learn>=1.4",
+    "matplotlib>=3.8",
+]
+
+[tool.ruff]
+line-length = 100
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/make_model_card.py" = ["E501"]  # texto longo do model card
+
+[project.optional-dependencies]
+train = [
+    "torch>=2.2",
+    "transformers>=4.46",
+    "accelerate>=0.30",
+]
+app = [
+    "gradio>=4.0",
+    "torch>=2.2",
+    "transformers>=4.46",
+]
